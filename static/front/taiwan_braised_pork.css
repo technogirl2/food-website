@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body{
+  background-color: #f7deaa;
+}
+
+.formsection{
+  padding-top: 50px;
+
+}
+.back{
+
+  padding:10px;
+  font-family: "proxima nova",sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  background-color: #eaa682;
+  border-color: #eaa682;
+  border-radius: 30%;
+
+
+
+
+}
+.d{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #A9402B;
+
+}
+
+li,a,button{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+
+}
+
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+
+}
+
+
+.nav_links{
+  list-style: none;
+
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 30px;
+
+}
+
+.nav_links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+  color: #0088a9;
+}
+button{
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169,1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.section2{
+  background-color:#fc7c55;
+  height:20px;
+  
+}
+
+
+.image1{
+  height:600px;
+  border-width: medium;
+  padding-left: 180px;
+  padding-top:50px;
+  padding-bottom: 50px;
+  width:auto;
+
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.inner1{
+  height: 150px;
+  font-family: "Monserrat",cursive;
+  padding-top: 50px;
+  font-size: 40px;
+}
+
+.inner{
+  height:300px;
+  padding-top: 50px;
+  font-family: "Monserrat",cursive;
+  font-size: 20px;
+}
+.contain{
+  height: 600px;
+}
+
+
+
+
+.section3{
+  background-color:#602203;
+  height:2px;
+  font-family: "Monserrat",cursive;
+}
+
+.section4{
+
+
+    background-color: rgb(247, 210, 197);
+    width: auto;
+    border: 10px solid rgb(7, 11, 7);
+    padding: 50px;
+    margin: 50px;
+    height: 1200px;
+
+  
+
+}
+.column4{
+ float:right;
+
+
+}
+.image4{
+  height: 400px;
+
+}
+
+.list{
+  padding-bottom: 70px;
+  height: 400px;
+}
+
+
+.lst{
+  color: #602203;
+  font-size: 20px;
+  margin: 20px;
+  
+}
+
+.veryBottom{
+  background-color: #A9402B;
+  height: 100px;
+}
+
+
+label{
+  font-family: "Montserrat", sans-serif;
+  color: #602203;
+  font-size: 23px;
+  
+}
+
+input[type=checkbox]:checked + label {
+  color: black;
+  text-decoration: line-through;
+} /*This is the MDN spec for doing this*/
+
+
+

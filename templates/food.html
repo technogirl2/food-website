@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <title>CSS</title>
+      <meta charset ="utf-8">
+      <script src="static/jsfile/myscripts.js"></script>
+      <link rel="stylesheet" href="{{ url_for('static',filename = 'styles/food.css')}}">
+      
+
+  </head>
+
+  <body>
+    <div class = "d">
+      <img class = "logo" src = "../static/other/images/logo2.png"></img>
+    
+
+     
+      <header class = "header2">
+        
+       
+          <div class = "nav_links">
+           
+            <li><a href = "http://127.0.0.1:8000/home">Home</a></li>
+            <li><a href = "http://127.0.0.1:8000/about">About</a></li>
+            <li><a href = "http://127.0.0.1:8000/receipe">Receipes</a></li>
+          </div>
+
+
+      <a class="cta" href = "http://127.0.0.1:8000/contact"><button class = "button1">Contact</button></a>
+
+
+    </header>
+
+
+  
+
+    </div>
+
+    <div class = "trim">
+      <img class = "headImage" img src = "https://s.hdnux.com/photos/01/30/53/64/23248182/3/rawImage.jpg">
+      <div class = "header">
+
+        
+          Taste of World of China
+
+       
+        
+       
+      
+      </div>
+
+
+    </div>
+
+    <div class="grid-container">
+      <a class = "cta" href = "{{ url_for('static',filename = 'front/Taiwan_braised_pork.html')}}">
+
+        <div class="grid-item">
+          <img class = "image1" img src = "https://lh3.googleusercontent.com/1b7XlaQJava3ZQlIWHc0FLNS6wc9tUfyQgMd0eyeD9qfo7NsroK8nVxd86U0JUd49X9Y6J7T22PxUCKweJgfdRJ0Y8fly20V7q7nb33AvkwWvXCXZ5QdZMb51UDexywXvi5K5xYl">
+
+          <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; color: #050505; position: absolute;padding-left:0px; padding-top: 20px;">
+            Taiwan Braised Pork
+          </h1>
+
+
+
+      </div>
+
+    </a>
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/HongKongBBQPork.html')}}">
+      <div class="grid-item">
+
+
+        <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2019/04/char-siu-recipe-15.jpg">
+
+        <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; color: #050505; position: absolute; padding-left:20px; padding-top: 20px">
+          Hong Kong BBQ Pork
+        </h1>
+
+
+
+      </div>
+
+
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/ClayPotRice.html')}}">
+      <div class="grid-item">
+        <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2014/03/hong-kong-rice-bowl-7.jpg">
+
+        <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; color: #050505; position: absolute; padding-top: 20px">
+
+          Clay Pot Sticky Rice
+
+        </h1>
+
+
+
+
+
+      </div>
+
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/BeefRadishStew.html')}}">
+
+            <div class="grid-item">
+
+              <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2019/01/cantonese-beef-stew-14.jpg">
+
+
+              <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; color: #050505; position: absolute; padding-left: 25px; padding-top:20px">
+
+                Beef Radish Stew
+
+              </h1>
+
+
+
+
+            </div>
+
+
+    </a>
+
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/MapoTofu.html')}}">
+
+
+
+            <div class="grid-item">
+
+
+              <img class = "image1" img src = "https://www.aheadofthyme.com/wp-content/uploads/2022/01/mapo-tofu.jpg">
+
+              <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; color: #050505; position: absolute; padding-left:60px; padding-top:20px;">
+                MaPo Tofu
+              </h1>
+
+            </div>
+
+    </a>
+
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/PorkRibsTaro.html')}}">
+      <div class="grid-item">
+
+        <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2016/03/braised-pork-ribs-8.jpg">
+
+
+        <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; padding-top:20px; color: #050505; position: absolute; padding-left: 10px; padding-top:20px;">
+          Pork Ribs With Taro
+        </h1>
+      </div>
+
+
+
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/CandiedFruits.html')}}">
+      <div class="grid-item">
+
+        <img class = "image1" img src = "https://simplyscrumptiouseats.com/wp-content/uploads/2022/02/tanghulu-1.jpg">
+
+          <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; color: #050505; position: absolute; padding-left:30px; padding-top: 20px">
+          Candied Fruits
+        </h1>
+
+
+
+      </div>
+
+
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/MangoCoconutSago.html')}}">
+
+      <div class="grid-item">
+        <img class = "image1" img src = "https://images.squarespace-cdn.com/content/v1/568e8fe6b204d5cbecd5c77e/1619492744771-K85FL4M6Z9SPDKTJGY2T/mango+coconut+sago+pudding_blog-7853-6.jpg?format=1500w">
+
+        <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; color: #050505; position: absolute; padding-left: 10px; padding-top: 20px">
+          Mango Coconut Sago
+        </h1>
+
+
+
+      </div>
+
+
+
+
+    </a>
+
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/BrownSugarNianGao.html')}}">
+      <div class="grid-item">
+
+        <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2016/01/nian-gao-6.jpg">
+
+          <h1 style="font-family: 'Lucida Console', 'Courier New', monospace; font-size: 20px; font-weight: 500; color: #050505; position: absolute; padding-top: 20px">
+          Brown Sugar Nian Gao
+        </h1>
+
+
+
+
+
+      </div>
+
+
+    </a>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/other/receipe.css">
+
+
+  </head>
+
+  <body>
+
+    <div class = "d">
+      <img class = "logo" src = "../static/other/images/logo2.png"></img>
+    
+
+      <header class = "header2">
+          <div class = "nav_links">
+            <li><a href = "http://127.0.0.1:8000/home">Home</a></li>
+            <li><a href = "http://127.0.0.1:8000/about">About</a></li>
+            <li><a href = "http://127.0.0.1:8000/receipe">Receipes</a></li>
+          </div>
+
+
+       <a class="cta" href = "http://127.0.0.1:8000/contact"><button class = "button1">Contact</button></a>
+
+    </header>
+
+
+
+    </div>
+
+    <h1 style = "font-family: Monserrat, serif; font-size: 40px; padding-left: 40px; padding-bottom:10px; padding-top: 40px">More Recipes</h1>
+    <div class = "welcome">
+      <p style = "font-family: Monserrat, cursive; font-size: 25px; padding-left: 40px;
+      padding-top:30px;">Love Chinese food? Want to cook something heart warming for your love ones? Checkout the
+        Receipes down below, every receipe is made with love! From rice, noodles, sweets, steam dishes to soups!
+        Browse by the collection to find the receipe you want to try and cook! I always love Chinese Dinner
+        because we always have soups, meals and dishes! Eating with family is the best!
+
+      </p>
+    </div>
+
+    <div id="myBtnContainer">
+      <p style = "padding-left: 28px; font-family: Monserrat, sans-serif; font-size: 30px; padding-bottom: 20px;">Receipe Finder</p>
+      <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('Meat/Stew')"> Meat/Stew</button>
+      <button class="btn" onclick="filterSelection('Rice/Noodles')"> Rice/Noodles</button>
+      <button class="btn" onclick="filterSelection('Desserts')"> Desserts</button>
+      <button class="btn" onclick="filterSelection('sides')"> Sides</button>
+      <button class="btn" onclick="filterSelection('Soup')"> Soup</button>
+    </div>
+
+<!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+    <div class="container">
+      <a class = "cta" href = "{{ url_for('static',filename = 'front/BeefRadishStew.html')}}">
+        <div class="filterDiv Meat/Stew">
+          <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 70px;">
+            Beef Radish Stew
+          </p>
+
+          <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2019/01/cantonese-beef-stew-14.jpg">
+
+
+
+        </div>
+      </a>
+
+      <a class = "cta" href = "{{ url_for('static',filename = 'front/BrownSugarNianGao.html')}}">
+        <div class="filterDiv Desserts">
+          <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 50px;">
+            Brown Sugar Nian Gao
+          </p>
+
+          <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2016/01/nian-gao-6.jpg">
+
+
+
+        </div>
+        
+      </a>
+
+
+
+      <a class = "cta" href = "{{ url_for('static',filename = 'front/CandiedFruits.html')}}">
+        <div class="filterDiv Desserts">
+          <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 70px;">
+            Candied Fruits
+          </p>
+          <img class = "image1" img src = https://simplyscrumptiouseats.com/wp-content/uploads/2022/02/tanghulu-1.jpg">
+          
+
+
+
+        </div>
+      </a>
+
+      <a class = "cta" href = "{{ url_for('static',filename = 'front/ClayPotRice.html')}}">
+         <div class="filterDiv Rice/Noodles">
+          <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 75px;">
+            Clay Pot Rice
+          </p>
+          <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2014/03/hong-kong-rice-bowl-7.jpg">
+
+
+
+
+         </div>
+      </a>
+
+      <a class = "cta" href = "{{ url_for('static',filename = 'front/HongKongBBQPork.html')}}">
+          <div class="filterDiv Meat/Stew">
+            <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 65px;">
+              Hong Kong BBQ Pork
+            </p>
+
+            <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2019/04/char-siu-recipe-15.jpg">
+          
+          </div>
+       
+     </a>
+
+     <a class = "cta" href = "{{ url_for('static',filename = 'front/MangoCoconutSago.html')}}">
+        <div class="filterDiv Desserts">
+          <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 50px;">
+            Mango Coconut Sago
+          </p>
+
+          <img class = "image1" img src = "https://images.squarespace-cdn.com/content/v1/568e8fe6b204d5cbecd5c77e/1619492744771-K85FL4M6Z9SPDKTJGY2T/mango+coconut+sago+pudding_blog-7853-6.jpg?format=1500w">
+        </div>
+   
+     </a>
+
+     <a class = "cta" href = "{{ url_for('static',filename = 'front/MapoTofu.html')}}">
+      <div class="filterDiv sides">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 105px;">
+          Mapo Tofu
+        </p>
+
+
+        <img class = "image1" img src = "https://www.aheadofthyme.com/wp-content/uploads/2022/01/mapo-tofu.jpg">
+
+      </div>
+ 
+    </a>
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/PorkRibsTaro.html')}}">
+      <div class="filterDiv Meat/Stew">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 80px;">
+          Pork Ribs Taro
+        </p>
+
+        <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2016/03/braised-pork-ribs-8.jpg">
+
+      
+      
+      </div>
+ 
+    </a>
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/Taiwan_braised_pork.html')}}">
+      <div class="filterDiv Meat/Stew">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 50px;">
+          Taiwanese Braised Pork
+        </p>
+
+        <img class = "image1" img src = "https://lh3.googleusercontent.com/1b7XlaQJava3ZQlIWHc0FLNS6wc9tUfyQgMd0eyeD9qfo7NsroK8nVxd86U0JUd49X9Y6J7T22PxUCKweJgfdRJ0Y8fly20V7q7nb33AvkwWvXCXZ5QdZMb51UDexywXvi5K5xYl">
+
+   
+
+
+        </div>
+
+
+
+
+ 
+    </a>
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/wontonsoup.html')}}">
+      <div class="filterDiv Rice/Noodles">
+
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 80px;">
+          Wonton Noodles
+        </p>
+
+        <img class = "image1" img src="https://www.recipetineats.com/wp-content/uploads/2016/09/Wontons_1-1.jpg">
+      </div>
+ 
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/TomatoPotatoSoup.html')}}">
+
+
+     
+    <div class="filterDiv Soup">
+      <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 60px;">
+        Tomato Potato Soup
+      </p>
+
+      <img class = "image1" img src = "https://www.ohmyfoodrecipes.com/wp-content/uploads/2018/12/tomato-and-potato-pork-bone-soup.jpg
+      ">
+    </div>
+
+    </a>
+
+  
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/FriedRice.html')}}">
+      <div class="filterDiv Rice/Noodles">
+
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 100px;">
+          Fried Rice
+        </p>
+
+        <img class = "image1" img src="https://redhousespice.com/wp-content/uploads/2021/10/Chinese-egg-fried-rice-1-1367x2048.jpg">
+      </div>
+
+    </a>
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/SoySauceNoodles.html')}}">
+
+    
+      <div class="filterDiv Rice/Noodles">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 45px;">
+        Soy Sauce Fried Noodles
+      </p>
+
+      <img class = "image1" img src="https://thewoksoflife.com/wp-content/uploads/2019/04/soy-sauce-pan-fried-noodles-11.jpg">
+    </div>
+
+  </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/CoconutSoup.html')}}">
+      <div class="filterDiv Soup">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 50px;">
+        Coconut Chicken Soup
+      </p>
+  
+      <img class = "image1" img src = "https://i0.wp.com/homecooksguide.com/wp-content/uploads/2020/11/ChickenGingerGojiBerrySoup.jpg?fit=1000%2C924&ssl=1">
+    </div>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/CantonPoachChicken.html')}}">
+      <div class="filterDiv Meat/Stew">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 50px;">
+        Canton Poached Chicken 
+      </p>
+  
+      <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2019/11/white-cut-chicken-18.jpg">
+    </div>
+  
+
+
+
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/Papayasoup.html')}}">
+      <div class="filterDiv Desserts">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 10px; font-size:13px">
+        Papaya and Snow Fungus Dessert Soup
+      </p>
+
+    
+        <img class = "image1" img src = "https://i0.wp.com/www.wokandkin.com/wp-content/uploads/2021/09/Papaya-and-Snow-Fungus-Dessert-Soup-Close-Up-saved-for-web.png?w=1200&ssl=1">
+    </div>
+    </a>
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/ChineseCucumber.html')}}">
+      <div class="filterDiv sides">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 50px;">
+          Chinese Cucumber Salad
+        </p>
+
+    
+        <img class = "image1" img src = "https://www.abeautifulplate.com/wp-content/uploads/2019/04/chinese-cucumber-salad-1-7.jpg">
+
+    </div>
+  
+    </a>
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/porkBelly.html')}}">
+      <div class="filterDiv sides">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 10px;">
+          Pork Belly With Mustard Greens
+        </p>
+
+    
+        <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2015/01/mei-cai-kou-rou-9-2.jpg">
+
+    </div>
+  
+    </a>
+
+    
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/CornCarrotSoup.html')}}">
+      <div class="filterDiv Soup">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 50px;">
+          Corn and Carrot Soup
+        </p>
+
+    
+        <img class = "image1" img src = "https://i0.wp.com/www.themissinglokness.com/wp-content/uploads/2022/09/BJG_0298.jpg?w=900&ssl=1">
+
+    </div>
+  
+    </a>
+   
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/SweetGingerSoup.html')}}">
+      <div class="filterDiv Desserts">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 30px; font-size: 13px;">
+          Sweet Potato Ginger Dessert Soup
+        </p>
+
+    
+        <img class = "image1" img src = "https://i0.wp.com/www.wokandkin.com/wp-content/uploads/2021/03/Sweet-Potato-and-Ginger-Dessert-Soup-saved-for-web.png?w=1200&ssl=1">
+
+    </div>
+  
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/WatercressSoup.html')}}">
+      <div class="filterDiv Soup">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left: 50px; font-size: 15px;">
+          Watercress Carrot Soup
+        </p>
+
+    
+        <img class = "image1" img src = "https://i0.wp.com/www.wokandkin.com/wp-content/uploads/2020/03/Watercress-soup-saved-for-web.png?w=600&ssl=1">
+
+    </div>
+  
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/SteamFish.html')}}">
+      <div class="filterDiv Meat/Stew">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:90px;; font-size: 18px;">
+          Steam Fish
+        </p>
+
+    
+        <img class = "image1" img src = "https://i0.wp.com/www.wokandkin.com/wp-content/uploads/2021/05/Steamed-Fish-with-Ginger-and-Shallots-saved-for-web-1200px.png?w=1200&ssl=1">
+
+    </div>
+  
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/ChickenChestnut.html')}}">
+      <div class="filterDiv Meat/Stew">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:40px;; font-size: 18px;">
+          Chicken With Chestnuts
+        </p>
+
+    
+        <img class = "image1" img src = "https://assets.epicurious.com/photos/618e8b695038ad362765ac5d/1:1/w_2240,c_limit/RedCookedChicken_RECIPE_2_110121_265.jpg">
+
+    </div>
+  
+    </a>
+
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/congeecenturyegg.html')}}">
+      <div class="filterDiv Rice/Noodles">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:28px;; font-size: 18px;">
+          Congee with Century Eggs
+        </p>
+
+    
+        <img class = "image1" img src = "https://i0.wp.com/www.wokandkin.com/wp-content/uploads/2020/02/Century-Egg-and-Pork-Congee-saved-for-web.png?w=600&ssl=1">
+
+    </div>
+  
+    </a>
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/TomatoEgg.html')}}">
+      <div class="filterDiv sides">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:55px;; font-size: 18px;">
+           Tomato With Eggs
+        </p>
+
+    
+        <img class = "image1" img src = "https://rasamalaysia.com/wp-content/uploads/2009/04/tomato-eggs4.jpg">
+
+    </div>
+  
+    </a>
+
+
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/PearSugar.html')}}">
+      <div class="filterDiv Desserts">
+        <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:70px;; font-size: 18px;">
+           Pear Sugar Soup
+        </p>
+
+    
+        <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2019/12/snow-fungus-soup-6.jpg
+
+        ">
+
+    </div>
+  
+    </a>
+
+  
+    <a class = "cta" href = "{{ url_for('static',filename = 'front/CantoneseSweetCrepe.html')}}">
+
+
+    <div class="filterDiv Desserts">
+      <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:40px;; font-size: 18px;">
+         Cantonese Sweet Crepe
+      </p>
+
+  
+      <img class = "image1" img src = "https://i0.wp.com/yingchen.life/wp-content/uploads/2019/08/IMG_1732_edited.jpg?w=1500&ssl=1">
+
+  </div>
+
+  </a>
+
+
+  <a class = "cta" href = "{{ url_for('static',filename = 'front/ChiveWithShrimpEggs.html')}}">
+
+
+    <div class="filterDiv sides">
+      <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:40px;; font-size: 18px;">
+        Chive, Shrimp and Eggs
+      </p>
+
+  
+      <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2017/07/chinese-chives-eggs-9.jpg
+      ">
+
+  </div>
+
+  </a>
+
+
+
+  <a class = "cta" href = "{{ url_for('static',filename = 'front/ChineseSausageRice.html')}}">
+
+
+    <div class="filterDiv Rice/Noodles">
+      <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:40px;; font-size: 14px;">
+        
+       Chinese Sausage Sticky Rice
+
+      </p>
+
+  
+      <img class = "image1" img src = "https://thewoksoflife.com/wp-content/uploads/2015/03/sticky-rice-chinese-sausage-7.jpg
+
+      ">
+
+  </div>
+
+  </a>
+
+
+
+  <a class = "cta" href = "{{ url_for('static',filename = 'front/Tanyuan.html')}}">
+
+
+    <div class="filterDiv Desserts">
+      <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:100px;; font-size: 18px;">
+        
+    Tan Yuan 
+      </p>
+
+  
+      <img class = "image1" img src = "https://www.simplyrecipes.com/thmb/x1n5XtdtprNF62v7ilYTZNY8ipg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Red-Bean-Tangyuan-LEAD-02-dd4e7ec0682042c4a7aa9b4bdc872c75.jpg
+
+      ">
+
+  </div>
+
+  </a>
+
+
+
+
+  <a class = "cta" href = "{{ url_for('static',filename = 'front/RadishCake.html')}}">
+
+
+    <div class="filterDiv sides">
+      <p style="font-family: 'Lucida Console', 'Courier New', monospace; color: #050505; position: absolute; padding-top:100px; padding-left:90px;; font-size: 18px;">
+        Turnip Cake
+       
+      </p>
+
+  
+      <img class = "image1" img src = "https://www.okonomikitchen.com/wp-content/uploads/2021/02/chinese-vegan-turnip-cakes-1-of-1-1365x2048.jpg
+
+
+      ">
+
+  </div>
+
+  </a>
+
+
+  
+
+
+
+
+
+   </div>
+  </div>
+    <script src = "static/javascript/receipe.js"></script>
+  </body>
+
+
+  
+
+</html>
+
+
+
